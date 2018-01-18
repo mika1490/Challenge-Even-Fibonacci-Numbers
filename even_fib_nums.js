@@ -6,22 +6,25 @@
  * @return {Number} sum
  */
 function _sumFibs( maxFibValue ) {
+  var previous = 0;
+  var current = 1;
   var sum = 0;
-
-  // do your work here
-
+  var next;
+  for(let i = 1; i <maxFibValue; i++) {
+  next = current + previous;
+  previous = current;
+  current = next;
+  if(current % 2 === 0 && current <= maxFibValue) {
+    sum += current;
+  }
+}
   return sum;
 }
 
 // bonus round
 function _highestFibonacciNumber (maxFibValue){
   var highest = 0;
-
-  //define your base case, validate your input
-
-
-  //do your work here
-
+  
   return highest;
 };
 
